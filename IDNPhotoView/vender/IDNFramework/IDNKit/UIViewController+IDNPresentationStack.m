@@ -1,7 +1,7 @@
 //
 //  UIViewController+IDNPresentationStack.m
 //
-//  Created by mahj on 15/8/26.
+//  Created by photondragon on 15/8/26.
 //
 
 #import "UIViewController+IDNPresentationStack.h"
@@ -79,7 +79,7 @@
 		return;
 	NSMutableArray* stacks = [UIViewController idnPresentationStacks];
 	for (NSMutableArray* stack in stacks) {
-		IDNPresentingVCInfo* info = stack[stack.count-1]; //取栈的最后一个
+		IDNPresentingVCInfo* info = [stack lastObject]; //取栈的最后一个 ??? 有时这个数组没有元素
 		if(info.controller == self || [info.childControllers containsPointer:(void*)self])
 		{
 			IDNPresentingVCInfo* newInfo = [[IDNPresentingVCInfo alloc] init];

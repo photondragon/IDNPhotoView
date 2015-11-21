@@ -172,7 +172,7 @@ enum AsyncTaskState
 
 			aTask.state = AsyncTaskStateRun; //必须在加锁区内设置这个属性，否则可能导致另一个scheduleATask线程也获取到这个任务
 			concurrentTasksCount++;
-			NSInvocationOperation* op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(runATask:) object:aTask];
+			NSInvocationOperation* op	= [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(runATask:) object:aTask];
 			[[IDNAsyncTask operationQueue] addOperation:op];
 			count++;
 		}
@@ -275,10 +275,10 @@ static int nextTaskId = 0;
 	}
 	if(group==nil)
 		group = [NSNull null];
-	AsyncTaskTask* task = [[AsyncTaskTask alloc] init];
+	AsyncTaskTask* task	= [[AsyncTaskTask alloc] init];
 	task.key = taskKey;
 	task.group = group;
-	task.taskBlock = taskBlock;
+	task.taskBlock	= taskBlock;
 	task.finishedBlock = finishedBlock;
 	task.cancelledBlock = cancelledBlock;
 	@synchronized(self)

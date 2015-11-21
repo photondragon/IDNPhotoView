@@ -16,7 +16,7 @@
 
 //中间框体透明度
 //#define FrameColor [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]
-#define FrameColor [UIColor colorWithRed:26/255.0 green:36/255.0 blue:49/255.0 alpha:1] //XiangYue
+#define FrameColor [UIColor colorWithRed:26/255.0 green:36/255.0 blue:49/255.0 alpha:1]
 
 #define PromptFrameWidth 120
 #define PromptFrameHeight 120
@@ -106,7 +106,7 @@
 	static NSMutableDictionary* dic = nil;
 	if(dic==nil)
 	{
-		dic = [NSMutableDictionary dictionary];
+		dic	= [NSMutableDictionary dictionary];
 	}
 	return dic;
 }

@@ -14,10 +14,14 @@
 #import	"NSError+IDNExtend.h"
 #import "NSDictionary+IDNExtend.h"
 #import "NSArray+IDN.h"
+#import "NSObject+IDNCustomObject.h"
 #import "NSObject+IDNDeallocBlock.h"
-#import "NSObject+IDNPerformSelectorNoWarning.h"
+#import "NSObject+IDNPerformSelector.h"
 #import "NSObject+IDNEventHandle.h"
+#import "NSObject+IDNNotice.h"
 #import "NSTimer+IDNWeakTarget.h"
+#import	"IDNAutoPersist.h"
+#import "IDNNotificationCenter.h"
 
 #ifndef Contacts_IDNFoundation_h
 #define Contacts_IDNFoundation_h

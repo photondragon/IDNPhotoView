@@ -1,13 +1,13 @@
 //
 //  NSObject+IDNEventHandle.m
 //
-//  Created by mahj on 15/9/10.
+//  Created by photondragon on 15/9/10.
 //
 
 #import "NSObject+IDNEventHandle.h"
 #import <objc/runtime.h>
 #import "NSObject+IDNDeallocBlock.h"
-#import "NSObject+IDNPerformSelectorNoWarning.h"
+#import "NSObject+IDNPerformSelector.h"
 
 @interface NSObjectIDNEventHandleWeakTarget : NSObject
 @property (nonatomic,weak) id weakTarget;

@@ -18,7 +18,7 @@
 	sizeInPixels.width = size.width*scale;
 	sizeInPixels.height = size.height*scale;
 
-	int bytesPerRow = 4*sizeInPixels.width;
+	int bytesPerRow	= 4*sizeInPixels.width;
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	CGContextRef context = CGBitmapContextCreate(NULL,
 												 sizeInPixels.width,
@@ -74,8 +74,8 @@
 
 - (UIImage *)resizedImageWithSize:(CGSize)size
 {
-	size.width = (int)size.width;//取整
-	size.height = (int)size.height;//取整
+	size.width	= (int)size.width;//取整
+	size.height	= (int)size.height;//取整
 
 	CGFloat scale = self.scale;
 
@@ -94,7 +94,7 @@
 		sizeInPixels.height = f;
 	}
 
-	int bytesPerRow = 4*sizeInPixels.width;
+	int bytesPerRow	= 4*sizeInPixels.width;
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	CGContextRef context = CGBitmapContextCreate(NULL,
 												 sizeInPixels.width,
@@ -147,8 +147,8 @@
 	}
 	else
 	{
-		size.width = (int)size.width;//取整
-		size.height = (int)size.height;//取整
+		size.width	= (int)size.width;//取整
+		size.height	= (int)size.height;//取整
 		
 		CGFloat scale = self.scale;
 		
@@ -173,7 +173,7 @@
 			nonClipSizeInPixels.height = f;
 		}
 		
-		int bytesPerRow = 4*sizeInPixels.width;
+		int bytesPerRow	= 4*sizeInPixels.width;
 		CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 		CGContextRef context = CGBitmapContextCreate(NULL,
 													 sizeInPixels.width,
@@ -234,7 +234,7 @@
 		sizeInPixels.height = f;
 	}
 	
-	int bytesPerRow = 4*sizeInPixels.width;
+	int bytesPerRow	= 4*sizeInPixels.width;
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	CGContextRef context = CGBitmapContextCreate(NULL,
 												 sizeInPixels.width,

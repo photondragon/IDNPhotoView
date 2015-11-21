@@ -438,7 +438,7 @@ BreviaryImageViewDelegate>
 
 			NSNumber* indexNumber = @(i);
 			__weak __typeof(self) wself = self;
-			[IDNTask putTaskWithKey:indexNumber group:self task:^id{
+			[IDNTask submitTask:^id{
 				if([IDNTask isTaskCancelled])
 					return nil;
 				// 加载图片
@@ -450,7 +450,7 @@ BreviaryImageViewDelegate>
 			} finished:^(UIImage* img) {
 				__typeof(self) sself = wself;
 				[sself loadedImage:img atIndex:indexNumber];
-			} cancelled:nil];
+			} cancelled:nil key:indexNumber group:self];
 		}
 	}
 	bufferHeadIndex = head;
